@@ -1,0 +1,460 @@
+
+html{
+  scroll-behavior:smooth;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+body{
+margin:0;
+padding:0;
+width:100vw;
+height:100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+/* background-color:rgb(162, 163, 162); */
+background-image: url("https://img2.wallspic.com/previews/7/8/4/9/19487/19487-teclado_numrico-x750.jpg");
+background-position:boottom;
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment: fixed;
+overflow-x: visible;
+}
+
+/*This part is the nav.....................*/
+.cont_nav{
+    display: block;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    height: 10%;
+    position:fixed;
+    z-index: 101;
+}
+  nav ul {
+    display: flex;
+    list-style: none;
+    overflow: hidden; 
+
+  }
+  nav ul li {
+    font-size: 20px;
+  }
+  nav ul li a {
+    display: block; 
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    
+  }
+  nav ul li:hover {
+    /* background: rgba(227, 229, 227, 0.616); */
+    border-bottom: 3px solid #0ff;
+   
+  }
+
+
+/*........................................*/
+
+/*This is the presentation*/
+
+
+.title_p{
+  margin-top:4%;
+  text-align :center;
+
+}
+.big_conteinner_pres{
+
+  margin-top: 10%;
+  display:flex;
+  justify-content: center;
+  align-items:end;
+  height: 80%;
+  width: 100%;
+  border:1px solid #000;
+  background: #02020273;
+  backdrop-filter: blur(10px);
+  flex:none;
+}
+.cont_Presentacion{
+    color:#BBBABA;
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    align-self:center;
+    width: 30%;
+    /*Esta parte sirve para evitar que el texto se desboorde*/
+    height: 50%;
+    word-break: break-all;
+}
+.profile{
+
+ height: 80%;
+ width: 50%;
+ filter: drop-shadow(10px 10px 10px #0ff);
+}
+.profile img{
+  width:100%;
+  height:100%;
+
+}
+.cont_Presentacion h1{
+
+  font-style:oblique
+
+
+}
+.btn_cv{
+
+  width: 30%;
+  height:12%;
+  background-color: #0ff;
+  color:#fff;
+  font-size: large;
+  font-weight:600;
+  align-self:center;
+  transition:box-shadow 0.3s;
+
+}
+.btn_cv:hover{
+  cursor:pointer;
+  box-shadow:3px 3px 6px rgb(246, 251, 251);
+}
+
+/*........................................*/
+.title_projects{
+
+flex:none;
+text-align:center;
+text-justify: center;
+height: 100px;
+width: 200px;
+color:#BBBABA;
+
+
+}
+.big_conteinner{
+  font-size:10%;
+  display: flex;
+  position:relative;
+  justify-content:center;
+  width: 100%;
+  height:80%;
+  flex-wrap: wrap;
+  flex:none;
+  border:1px solid #000;
+}
+.projects{
+  color:#fff;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:30%;
+  background: rgba(0,0,0,0.7);
+  height:50%;
+  border:1px solid #000;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition:top 0.5s,left 0.5s,height 0.5s,width 0.5s;
+  border-radius:20px;  border:1px solid #fff;
+  flex:none;
+}
+#fantasma{
+
+  border:1px solid #000;
+ display: none;
+ visibility: hidden;
+ width:30%;
+ height:50%;
+ flex:none;
+}
+.description{
+width:100%;
+}
+.carrussel{
+position:relative;
+width:100%;
+height:50%;
+background-color: chocolate;
+flex:none;
+overflow-y:clip;
+}
+
+#sig{
+  position:absolute;
+  top:42%;
+  left:88%;
+  font-size: 40px;
+  user-select: none;
+
+}
+#sig:hover{
+
+  cursor:pointer;
+  color:#a1a1a6;
+
+}
+
+#ver_mas{
+
+  font-size: 40px;
+  user-select: none;
+}
+#ver_mas:hover{
+ cursor:pointer;
+ color:#a1a1a6;
+
+
+}
+
+#ver_menos{
+
+  font-size: 48px;
+  user-select: none;
+}
+#ver_menos:hover{
+ cursor:pointer;
+ color:#a1a1a6;
+}
+
+.mini_carrussel{
+display:flex;
+width:300%;
+height:100%;
+transform:translateX(0%);
+transition:transform 0.5s;
+}
+
+
+#mini_carrussel_3 {
+  width:400%;
+}
+
+ 
+
+.carr_component{
+width:100%;
+height:100%;
+border:3px solid #000;
+
+}
+
+
+.carr_component img{
+width:100%;
+height:100%;
+
+
+}
+
+
+
+/*this part is the aptitudes*/
+.conte_degrade{
+position:absolute;
+display: none;
+width: 100%;
+height: 110%;
+z-index: 90;
+box-shadow: 0px 0px 25px #222;
+background: #02020273;
+backdrop-filter: blur(10px);
+flex: none;
+}
+.div_mayor{
+  color: #fff;
+  width: 70%;
+  height:70%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  border:1px solid #fff;
+  flex:none;
+  margin-top:5%;
+  background: #02020273;
+  backdrop-filter: blur(10px);
+
+
+}
+.tit-ap{
+
+display: flex;
+justify-content: center;
+font-size:xx-large;
+
+
+
+}
+
+.Aptitudes{
+display:flex;
+height: 30%;
+width: 100%;
+align-items: end;
+justify-content:center;
+gap:2%;
+
+}
+
+.tec_ico{
+ width: 7%;
+ height: 45%;
+ display: flex;
+ align-items:center;
+ justify-content:center;
+ 
+}
+
+.tec_ico img{
+ width:100%;
+ transition: width 0.4s,height 0.4s,filter 0.4s;
+}
+
+.tec_ico img:hover{
+  cursor:pointer;
+}
+
+
+.htmlogo:hover{
+
+  filter:drop-shadow(5px 10px 5px rgb(255, 157, 0));
+  
+
+}
+#csslogo{
+  height: 45%;
+  width: 10.6%;
+}
+.csslogo:hover{
+  filter:drop-shadow(5px 10px 5px #0ff);
+}
+.javascriptlogo:hover{
+  filter:drop-shadow(5px 10px 5px rgb(246, 255, 0));
+}
+.nodejslogo:hover{
+
+  filter:drop-shadow(5px 10px 5px rgb(4, 255, 0));
+}
+
+.reactlogo:hover{
+  filter:drop-shadow(5px 10px 5px #0ff);
+}
+
+
+.mysqlogo2{
+  width: 12%;
+  
+
+
+}
+.mysqlogo:hover{
+
+  filter:drop-shadow(5px 10px 5px #0ff);
+}
+
+.mongodblogo2{
+  height:50%;
+width:12%;
+
+}
+ .mongodblogo{
+  height: 60%;
+ }
+.mongodblogo:hover{
+
+  filter:drop-shadow(5px 10px 5px rgb(16, 200, 90));
+  
+}
+.gitlogo:hover{
+  filter:drop-shadow(5px 10px 5px rgb(255, 157, 0));
+}
+.githublogo{
+filter:invert(100%)
+
+
+
+}
+.githublogo:hover{
+  filter:drop-shadow(5px 10px 5px #fff);
+
+}
+
+.typescriptlogo:hover{
+  filter:drop-shadow(5px 10px 5px rgb(0, 153, 255));
+}
+
+.jquerylogo:hover{
+  filter:drop-shadow(5px 10px 5px rgb(0, 89, 255));
+
+}
+
+/*.......................................*/
+
+/*this is the footer*/
+
+footer{
+  margin-top:5%;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  bottom: 0;
+  border:1px solid #000;
+  background: #02020273;
+  backdrop-filter: blur(10px);
+  flex:none;
+}
+.contenedor{
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+color:#fff;
+width:50%;
+}
+.contenedor h2:hover{
+cursor: pointer;
+}
+.formu_cont{
+  justify-content: center;
+  width: 100%;
+  height:30%;
+  visibility:hidden;
+  opacity:0;
+  background-color: rgb(0, 0, 0,0.4);
+  transition:visibility 0.3s linear,opacity 0.3s linear;
+  border-radius:10px;
+  backdrop-filter:blur(10px)
+  
+}
+.formu_cont form{
+  display:flex;
+  flex-direction:column;
+   height: 100%;
+   width:100%;
+   align-items:center;
+
+
+}
+
+.inputs{
+margin-top: 5%;
+height:12%;
+width:80%;
+
+}
+
+#texto{
+
+height: 50%;
+resize: none;
+
+
+}
+
+
+/*......................./*
