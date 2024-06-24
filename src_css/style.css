@@ -22,6 +22,13 @@ overflow-x: visible;
 }
 
 /*This part is the nav.....................*/
+#btn_menu{
+
+display: none;
+color:#fff;
+font-size: 48px;
+
+}
 .icons{
   width: 10%;
   height: 5%;
@@ -56,6 +63,38 @@ overflow-x: visible;
 
 
 }
+.nav_mobile{
+
+  display: none;
+ 
+}
+.nav_mobile ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  overflow: hidden; 
+ 
+backdrop-filter: blur(20px);
+
+}
+.nav_mobile ul li {
+  font-size: 20px;
+}
+.nav_mobile ul li a {
+  display: block; 
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  
+}
+.nav_mobile ul li:hover {
+  /* background: rgba(227, 229, 227, 0.616); */
+  border-bottom: 3px solid #0ff;
+ 
+}
+
+
+
 
 .cont_nav{
     display: block;
@@ -65,23 +104,23 @@ overflow-x: visible;
     position:fixed;
     z-index: 101;
 }
-  nav ul {
+  .nav ul {
     display: flex;
     list-style: none;
     overflow: hidden; 
 
   }
-  nav ul li {
+  .nav ul li {
     font-size: 20px;
   }
-  nav ul li a {
+  .nav ul li a {
     display: block; 
     padding: 10px;
     color: #fff;
     text-decoration: none;
     
   }
-  nav ul li:hover {
+  .nav ul li:hover {
     /* background: rgba(227, 229, 227, 0.616); */
     border-bottom: 3px solid #0ff;
    
@@ -93,8 +132,9 @@ overflow-x: visible;
 /*This is the presentation*/
 
 #foto_perfil{
-   width: 40%;
-   height: 80%;
+  height: 300px;
+  width: 300px;
+  flex: none;
    filter:saturate(1);
    filter:contrast(1.5);
   
@@ -109,9 +149,9 @@ overflow-x: visible;
 
   margin-top: 10%;
   display:flex;
-  justify-content: start;
-  align-items:center;
-  height: 80%;
+  justify-content: center;
+ 
+  height: 70%;
   width: 100%;
   border:1px solid #000;
   background: #02020273;
@@ -123,28 +163,45 @@ overflow-x: visible;
     display:flex;
     flex-direction:column;
     align-self:center;
-    width: 30%;
+    width: 60%;
+    margin-left:3%;
     /*Esta parte sirve para evitar que el texto se desboorde*/
     height: 50%;
+    
     word-break: break-all;
+}
+.pres_conte{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+    flex-direction:column;
+    align-self:center;
+    width: 80%;
+    margin-left:3%;
+
+
+
 }
 .cont_presentacion p{
 
 font-size: medium;
 font-weight: bold;
+margin-top: 0;
+margin-bottom:0;
+
 
 }
 .profile{
- display:flex;
- align-items:start;
- justify-content: center;
- height: 80%;
- width: 50%;
+
+
+  display: flex;
+  align-items: center;
+
  /* filter: drop-shadow(10px 10px 10px rgb(240, 240, 240)); */
+ flex:none;
 }
 .profile img{
-  width:100%;
-  height:100%;
+ 
 
 }
 .cont_Presentacion h1{
@@ -155,8 +212,8 @@ font-weight: bold;
 }
 .btn_cv{
 
-  width: 30%;
-  height:12%;
+  width: 60%;
+  height:auto;
   background-color: #0ff;
   color:#fff;
   font-size: large;
@@ -552,3 +609,62 @@ resize: none;
 
 
 }
+
+
+@media(max-width:676px) {
+
+
+  .big_conteinner_pres{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .cont_presentacion{
+
+   
+    margin-left: 0;
+     height:auto;
+     width: 100%;
+     text-align: center;
+
+  }
+ 
+}
+@media (min-width: 561px) and (max-width: 816px) and (max-height: 651px) {
+  .big_conteinner {
+    height: auto;
+  }
+}
+
+
+
+@media(max-width:450px){
+    
+    .nav{
+
+
+      display: none;
+    }
+     #btn_menu{
+
+      display:flex;
+      z-index: 300;
+      position: absolute;
+      top: 0;
+      margin-right: 5%;
+   
+      
+      }
+      #btn_menu:hover{
+
+         cursor:pointer;
+         color: #a1a1a6;
+      }
+
+
+    
+}
+
+
+

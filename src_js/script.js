@@ -25,6 +25,42 @@ const sig=document.querySelectorAll('#sig');
 const mini_carrussel=document.querySelectorAll('.mini_carrussel');
 const big_conteinner=document.querySelector('.big_conteinner');
 const degrade=document.querySelector('.conte_degrade');
+const nav=document.querySelector(".nav");
+const btn_mobile=document.querySelector("#btn_menu");
+
+
+btn_mobile.addEventListener('click',()=>{
+if(nav.style.display!=='flex'){
+
+    nav.style.display='flex';
+
+}else{
+    nav.style.display='none';
+}
+
+
+
+
+});
+function checkMediaQuery() {
+    
+
+    if (window.matchMedia('(max-width: 450px)').matches) {
+        // Si la pantalla tiene 600px o menos, cambiar la clase
+        nav.classList.remove('nav');
+        nav.classList.add('nav_mobile');
+    } else {
+        // Si la pantalla es mayor a 600px, mantener la clase original
+        nav.classList.remove('nav_mobile');
+        nav.classList.add('nav');
+    }
+}
+
+// Ejecutar la función al cargar la página
+checkMediaQuery();
+
+// Añadir un event listener para ejecutar la función cuando cambie el tamaño de la ventana
+window.addEventListener('resize', checkMediaQuery);
 
 
 document.addEventListener('load',()=>{
