@@ -60,12 +60,15 @@ btn_mas.forEach((element,j) => {
         btn_menos[j].style.display='none';
         setTimeout(()=>{div1[j].style.position='';
         fanta[j].style.display='none';
-        div1[j].style.zIndex='0';},500);
-        div1[j].style.left=fanta[j].offsetLeft+"px";
+        div1[j].style.zIndex='0';degrade.style.display="none";},500);
+        //
+        div1[j].style.left=(fanta[j].offsetLeft-20)+"px";
         div1[j].style.top=fanta[j].offsetTop+"px";
-        div1[j].style.width='30%';
-        div1[j].style.height='50%';
-        degrade.style.display="none";
+        div1[j].style.width='250px';
+        div1[j].style.height='250px';
+        degrade.style.opacity='0';
+        
+        
         //this is for the effect of btn(max-min)
         btn_mas[j].style.display='block';
        btn_menos[j].style.display='none';
@@ -76,31 +79,35 @@ btn_mas.forEach((element,j) => {
         //this is for the effect of btn(max-min)
         btn_mas[j].style.display='none';
         btn_menos[j].style.display='block';
-
         degrade.style.display="block";
-
+         //size of the conteinner
+        const tam_cont=big_conteinner.offsetWidth;
+        const width_window=window.innerWidth;
+    
         fanta[j].style.display='block';
-        div1[j].style.position='absolute';
+        
+  
+        
+        
+            div1[j].style.position='absolute';
+          
         div1[j].style.top=fanta[j].offsetTop+'px';
         div1[j].style.left=fanta[j].offsetLeft+'px';
-       //this set the left value of the div with position absolute and enter to this if statement only if j<=2 because i just have 3 div elements per row,so if j=3 restart j=0 substracting -3 without change the value of j 
 
-        // j<=2?(console.log('entro en el condicional',div1[j].style.left),
-        //     div1[j].style.left=`${j*32}%`):(div1[j].style.left=`${(j-3)*32}%`,
-        //     console.log('no entro '+div1[j].style.left+', x= '+x))
-        
-        
-            //and here i just define  the height,zindex,and top of the div with the value "offsetTop" of anoter ghost div that fills the empty space from the div that have position absolute "that prevents the main flow inside the parent div from being affected"
+        setTimeout(()=>{div1[j].style.top='0px';
+            div1[j].style.left=((tam_cont/2)-125-20)+'px';
+            },1)
+     
+            
             setTimeout(()=>{
-                div1[j].style.left=`30%`
-                div1[j].style.top=`${5}%`;
-                div1[j].style.height='100%';
-                div1[j].style.width='40%';
+                
+                div1[j].style.left=width_window<=543?`${(tam_cont/2)-175-20}px`:`${(tam_cont/2)-300-20}px`;
+           
+                div1[j].style.height=width_window<=543?'350px':'600px';
+                div1[j].style.width=width_window<=543?'350px':'600px';
+                degrade.style.opacity='1';
                 div1[j].style.zIndex='100';
-            },10);
-        //div1[j].style.top=`${0}px`;
-        
-         //fanta[j].style.visibility='visible';
+            },1);
       
      });
 
