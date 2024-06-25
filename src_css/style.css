@@ -59,10 +59,7 @@ font-size: 48px;
   filter:invert(100%);
 
 }
-#icon_conte img:hover{
 
-
-}
 .nav_mobile{
 
   display: none;
@@ -396,6 +393,7 @@ flex: none;
   margin-top:5%;
   background: #02020273;
   backdrop-filter: blur(10px);
+  text-align:center;
 
 
 }
@@ -545,7 +543,7 @@ justify-content: center;
 align-items: center;
 flex-direction:column;
 color:#fff;
-width:50%;
+width:80%;
 }
 .contenedor h2:hover{
 cursor: pointer;

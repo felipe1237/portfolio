@@ -3,6 +3,17 @@ const btnconta=document.querySelector('.titulo_seccion');
 const carrusel=document.querySelector('.Proyectos');
 const conte_projects=document.querySelector('.conte_projects'); 
 const projects=document.querySelectorAll('.projects');
+const btn=document.querySelector('button');
+const div1=document.querySelectorAll('.projects');
+const fanta=document.querySelectorAll('#fantasma');
+const btn_mas=document.querySelectorAll('#ver_mas');
+const btn_menos=document.querySelectorAll('#ver_menos');
+const sig=document.querySelectorAll('#sig');
+const mini_carrussel=document.querySelectorAll('.mini_carrussel');
+const big_conteinner=document.querySelector('.big_conteinner');
+const degrade=document.querySelector('.conte_degrade');
+const nav=document.querySelector(".nav");
+const btn_mobile=document.querySelector("#btn_menu");
 let  press=false;
 
 
@@ -16,18 +27,6 @@ btnconta.addEventListener('click',(e)=>{
 
 });
 
-const btn=document.querySelector('button');
-const div1=document.querySelectorAll('.projects');
-const fanta=document.querySelectorAll('#fantasma');
-const btn_mas=document.querySelectorAll('#ver_mas');
-const btn_menos=document.querySelectorAll('#ver_menos');
-const sig=document.querySelectorAll('#sig');
-const mini_carrussel=document.querySelectorAll('.mini_carrussel');
-const big_conteinner=document.querySelector('.big_conteinner');
-const degrade=document.querySelector('.conte_degrade');
-const nav=document.querySelector(".nav");
-const btn_mobile=document.querySelector("#btn_menu");
-
 
 btn_mobile.addEventListener('click',()=>{
 if(nav.style.display!=='flex'){
@@ -38,19 +37,16 @@ if(nav.style.display!=='flex'){
     nav.style.display='none';
 }
 
-
-
-
 });
 function checkMediaQuery() {
     
 
     if (window.matchMedia('(max-width: 450px)').matches) {
-        // Si la pantalla tiene 600px o menos, cambiar la clase
+        // Si la pantalla tiene 450px o menos, cambiar la clase
         nav.classList.remove('nav');
         nav.classList.add('nav_mobile');
     } else {
-        // Si la pantalla es mayor a 600px, mantener la clase original
+        // Si la pantalla es mayor a 450px, mantener la clase original
         nav.classList.remove('nav_mobile');
         nav.classList.add('nav');
     }
@@ -78,10 +74,12 @@ sig.forEach((element, i) => {
     element.addEventListener('click', () => {
         mini_carrussel[i].style.transform = `translateX(${j}%)`;
         j -= value_decrement;
+       
         // Usamos 'Math.abs' para evitar errores de precisión en punto flotante
         if (Math.abs(j) >= 100) {
             j = 0; // Resetear 'j' a 0 cuando alcanza el final
         }
+        
     });
 });
 
