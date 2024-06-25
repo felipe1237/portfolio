@@ -50,7 +50,9 @@
         <div class="cont_presentacion">
         
         <p>Apasionado desarrollador web con mucha impetud y predisposición para el trabajo.Presto mucha atencion al detalle,me gusta aprender cosas nuevas y tengo buenas habilidades comunicativas,trabaje en varios proyectos de utilidad brindando un enfoque en util centrado en la  seguridad y reusabilidad</p>
-         <button class="btn_cv">CV</button>
+         <a class="btn_cv" href="https://drive.google.com/uc?id=1K8ivCkKhkSjgMZ_ZEV7DOWX8t8CjeSny&export=download">
+          CV
+         </a>
         </div>
 
     </div>
@@ -275,11 +277,16 @@
        <h2 class="titulo_seccion">Contacta conmigo</h2>
 
     <div class="formu_cont">
-      <form >
-      <input  class="inputs"type="email" placeholder="Email">
+      
+      <form action="https://formsubmit.co/0e1c7c3b707cc1edb95b2c1d0d2585fa" method="POST">
+      <input  class="inputs"type="email" placeholder="Email" name="email">
 
-      <textarea name=""class="inputs"  id="texto" cols="30" rows="10"></textarea>
-      <input class="inputs" type="submit" name="Enviar">
+      <textarea name="asunto"class="inputs"  id="texto" cols="30" rows="10"></textarea>
+      
+      <input type="submit" value="Enviar" class="inputs">
+  
+       <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+       <input type="hidden" name="_captcha" value="false">
 
       </form>
      
