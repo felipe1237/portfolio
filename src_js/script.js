@@ -12,7 +12,8 @@ const sig=document.querySelectorAll('#sig');
 const mini_carrussel=document.querySelectorAll('.mini_carrussel');
 const big_conteinner=document.querySelector('.big_conteinner');
 const degrade=document.querySelector('.conte_degrade');
-const nav=document.querySelector(".nav");
+
+const nav=document.querySelector('.nav');
 const btn_mobile=document.querySelector("#btn_menu");
 let  press=false;
 
@@ -29,12 +30,13 @@ btnconta.addEventListener('click',(e)=>{
 
 
 btn_mobile.addEventListener('click',()=>{
-if(nav.style.display!=='flex'){
-
-    nav.style.display='flex';
-
+if(nav.style.visibility!=='visible'){
+    nav.style.opacity='1';
+    nav.style.visibility='visible';
 }else{
-    nav.style.display='none';
+    
+    nav.style.opacity='0';
+    nav.style.visibility='hidden';
 }
 
 });
@@ -45,17 +47,21 @@ function checkMediaQuery() {
         // Si la pantalla tiene 450px o menos, cambiar la clase
         nav.classList.remove('nav');
         nav.classList.add('nav_mobile');
+        nav.style.opacity='0';
+        nav.style.visibility='hidden';
     } else {
         // Si la pantalla es mayor a 450px, mantener la clase original
         nav.classList.remove('nav_mobile');
         nav.classList.add('nav');
+        nav.style.opacity='1';
+        nav.style.visibility='visible';
     }
 }
 
-// Ejecutar la función al cargar la página
+
 checkMediaQuery();
 
-// Añadir un event listener para ejecutar la función cuando cambie el tamaño de la ventana
+
 window.addEventListener('resize', checkMediaQuery);
 
 
@@ -120,11 +126,7 @@ btn_mas.forEach((element,j) => {
     
         fanta[j].style.display='block';
         
-  
-        
-        
-            div1[j].style.position='absolute';
-          
+        div1[j].style.position='absolute';
         div1[j].style.top=fanta[j].offsetTop+'px';
         div1[j].style.left=fanta[j].offsetLeft+'px';
 
@@ -132,13 +134,15 @@ btn_mas.forEach((element,j) => {
             div1[j].style.left=((tam_cont/2)-125-20)+'px';
             },1)
      
-            
             setTimeout(()=>{
-                
                 div1[j].style.left=width_window<=543?`${(tam_cont/2)-175-20}px`:`${(tam_cont/2)-300-20}px`;
-           
-                div1[j].style.height=width_window<=543?'350px':'600px';
-                div1[j].style.width=width_window<=543?'350px':'600px';
+                div1[j].style.height=width_window<=543?'auto':'600px';
+                div1[j].style.width=width_window<=543?'80%':'600px';
+                if (width_window <= 450) {
+                    window.scrollTo(0, document.documentElement.scrollHeight * 0.10);
+                    big_conteinner.scrollTo(0,0);
+                }
+
                 degrade.style.opacity='1';
                 div1[j].style.zIndex='100';
             },1);
