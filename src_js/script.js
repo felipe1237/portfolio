@@ -15,6 +15,7 @@ const degrade=document.querySelector('.conte_degrade');
 
 const nav=document.querySelector('.nav');
 const btn_mobile=document.querySelector("#btn_menu");
+const description_conte=document.querySelectorAll('.description');
 let  press=false;
 
 
@@ -98,6 +99,7 @@ btn_mas.forEach((element,j) => {
 
         btn_mas[j].style.display='block';
         btn_menos[j].style.display='none';
+        description_conte[j].style.visibility="hidden";
         setTimeout(()=>{div1[j].style.position='';
         fanta[j].style.display='none';
         div1[j].style.zIndex='0';degrade.style.display="none";},500);
@@ -120,6 +122,8 @@ btn_mas.forEach((element,j) => {
         btn_mas[j].style.display='none';
         btn_menos[j].style.display='block';
         degrade.style.display="block";
+        description_conte[j].style.visibility="visible";
+                                
          //size of the conteinner
         const tam_cont=big_conteinner.offsetWidth;
         const width_window=window.innerWidth;
