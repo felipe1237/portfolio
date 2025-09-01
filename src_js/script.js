@@ -4,7 +4,6 @@ const carrusel=document.querySelector('.Proyectos');
 const conte_projects=document.querySelector('.conte_projects'); 
 const projects=document.querySelectorAll('.projects');
 const btn=document.querySelector('button');
-const div1=document.querySelectorAll('.projects');
 const fanta=document.querySelectorAll('#fantasma');
 const btn_mas=document.querySelectorAll('#ver_mas');
 const btn_menos=document.querySelectorAll('#ver_menos');
@@ -12,14 +11,89 @@ const sig=document.querySelectorAll('#sig');
 const mini_carrussel=document.querySelectorAll('.mini_carrussel');
 const big_conteinner=document.querySelector('.big_conteinner');
 const degrade=document.querySelector('.conte_degrade');
-
+const next_btn=document.querySelector("#Big_conteinner_nextArrow");
 const nav=document.querySelector('.nav');
 const btn_mobile=document.querySelector("#btn_menu");
 const description_conte=document.querySelectorAll('.description');
+
 let  press=false;
 
 
 //this function places buttons in boxes whose content is larger than the parent box
+
+
+// Obtén tu elemento
+// const observer = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     if (!entry.isIntersecting) {
+//       console.log('El elemento ha salido de la ventana gráfica');
+//     } else {
+//       console.log('El elemento ha entrado en la ventana gráfica');
+//     }
+//   });
+// });
+
+// observer.observe(big_conteinner);
+
+
+// const observer = new IntersectionObserver(
+//     (entries) => {
+//         entries.forEach(entry => {
+//             // Si el elemento ya no está 100% visible, está saliendo
+//             if (entry.intersectionRatio < 10) {
+//                 console.log('¡El elemento comienza a salir del contenedor!');
+//                 // Aquí puedes hacer lo que necesites, como mostrar un mensaje, etc.
+//                 // Puedes desconectar el observador si ya no necesitas monitorear este elemento
+//                  //observer.unobserve(big_conteinner); 
+//             }
+//         });
+//     },
+//     {
+//         root: big_conteinner, // El contenedor a observar
+//         threshold: 1.0 // Se ejecuta cuando el 100% del elemento está dentro del contenedor (o sale de él)
+//     }
+// );
+
+// // 4. Iniciar la observación
+// observer.observe(big_conteinner);
+
+
+let X=0;
+let Y=-1;
+let div1=document.querySelectorAll('.projects');
+const sub_conte=document.querySelector('.sub_conte');
+next_btn.addEventListener('click',(e)=>{
+
+X=X-33;
+
+Y++;
+const new_child=div1[Y].cloneNode(true);
+sub_conte.appendChild(new_child);
+console.log("Elemento insertado",div1[Y],Y);
+
+
+if(Y==div1.length){
+
+    Y=-1;
+}
+sub_conte.style.transform = `translateX(${X}%)`;
+
+const anchoActual = sub_conte.clientWidth;
+const anchoPadre=big_conteinner.clientWidth;
+const anchoPorc=(anchoActual/anchoPadre)*100;
+sub_conte.style.width=`${anchoPorc}`;
+console.log("Elemento insertado",anchoPorc);
+
+
+
+
+
+});
+
+
+
+
+
 
 
 let i=0;
