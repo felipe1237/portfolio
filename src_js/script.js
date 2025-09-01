@@ -93,67 +93,67 @@ sig.forEach((element, i) => {
 
 let x=0;
 
-btn_mas.forEach((element,j) => {
+// btn_mas.forEach((element,j) => {
 
-    btn_menos[j].addEventListener('click',()=>{
+//     btn_menos[j].addEventListener('click',()=>{
 
-        btn_mas[j].style.display='block';
-        btn_menos[j].style.display='none';
-        description_conte[j].style.visibility="hidden";
-        setTimeout(()=>{div1[j].style.position='';
-        fanta[j].style.display='none';
-        div1[j].style.zIndex='0';degrade.style.display="none";},500);
-        //
-        div1[j].style.left=(fanta[j].offsetLeft-20)+"px";
-        div1[j].style.top=fanta[j].offsetTop+"px";
-        div1[j].style.width='250px';
-        div1[j].style.height='250px';
-        degrade.style.opacity='0';
+//         btn_mas[j].style.display='block';
+//         btn_menos[j].style.display='none';
+//         description_conte[j].style.visibility="hidden";
+//         setTimeout(()=>{div1[j].style.position='';
+//         fanta[j].style.display='none';
+//         div1[j].style.zIndex='0';degrade.style.display="none";},500);
+//         //
+//         div1[j].style.left=(fanta[j].offsetLeft-20)+"px";
+//         div1[j].style.top=fanta[j].offsetTop+"px";
+//         div1[j].style.width='250px';
+//         div1[j].style.height='250px';
+//         degrade.style.opacity='0';
         
         
-        //this is for the effect of btn(max-min)
-        btn_mas[j].style.display='block';
-       btn_menos[j].style.display='none';
+//         //this is for the effect of btn(max-min)
+//         btn_mas[j].style.display='block';
+//        btn_menos[j].style.display='none';
        
 
-    });
-    element.addEventListener('click',()=>{
-        //this is for the effect of btn(max-min)
-        btn_mas[j].style.display='none';
-        btn_menos[j].style.display='block';
-        degrade.style.display="block";
-        description_conte[j].style.visibility="visible";
+//     });
+//     element.addEventListener('click',()=>{
+//         //this is for the effect of btn(max-min)
+//         btn_mas[j].style.display='none';
+//         btn_menos[j].style.display='block';
+//         degrade.style.display="block";
+//         description_conte[j].style.visibility="visible";
                                 
-         //size of the conteinner
-        const tam_cont=big_conteinner.offsetWidth;
-        const width_window=window.innerWidth;
+//          //size of the conteinner
+//         const tam_cont=big_conteinner.offsetWidth;
+//         const width_window=window.innerWidth;
     
-        fanta[j].style.display='block';
+//         fanta[j].style.display='block';
         
-        div1[j].style.position='absolute';
-        div1[j].style.top=fanta[j].offsetTop+'px';
-        div1[j].style.left=fanta[j].offsetLeft+'px';
+//         div1[j].style.position='absolute';
+//         div1[j].style.top=fanta[j].offsetTop+'px';
+//         div1[j].style.left=fanta[j].offsetLeft+'px';
 
-        setTimeout(()=>{div1[j].style.top='0px';
-            div1[j].style.left=((tam_cont/2)-125-20)+'px';
-            },1)
+//         setTimeout(()=>{div1[j].style.top='0px';
+//             div1[j].style.left=((tam_cont/2)-125-20)+'px';
+//             },1)
      
-            setTimeout(()=>{
-                div1[j].style.left=width_window<=543?`${(tam_cont/2)-175-20}px`:`${(tam_cont/2)-300-20}px`;
-                div1[j].style.height=width_window<=543?'auto':'600px';
-                div1[j].style.width=width_window<=543?'80%':'600px';
-                if (width_window <= 450) {
-                    window.scrollTo(0, document.documentElement.scrollHeight * 0.10);
-                    big_conteinner.scrollTo(0,0);
-                }
+//             setTimeout(()=>{
+//                 div1[j].style.left=width_window<=543?`${(tam_cont/2)-175-20}px`:`${(tam_cont/2)-300-20}px`;
+//                 div1[j].style.height=width_window<=543?'auto':'600px';
+//                 div1[j].style.width=width_window<=543?'80%':'600px';
+//                 if (width_window <= 450) {
+//                     window.scrollTo(0, document.documentElement.scrollHeight * 0.10);
+//                     big_conteinner.scrollTo(0,0);
+//                 }
 
-                degrade.style.opacity='1';
-                div1[j].style.zIndex='100';
-            },1);
+//                 degrade.style.opacity='1';
+//                 div1[j].style.zIndex='100';
+//             },1);
       
-     });
+//      });
 
-});
+// });
 
 /*
 btnconta.addEventListener('click',()=>{
